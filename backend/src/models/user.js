@@ -46,6 +46,10 @@ const userSchema =new mongoose.Schema({
             default: [0, 0],
           },
         },
+        photoUrl:{
+          type:String,
+          required:true
+        }
         
         
 

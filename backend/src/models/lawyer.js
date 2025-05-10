@@ -64,6 +64,10 @@ phone:
    proBono: {
      type: Boolean,
      default: false
+   },
+   photoUrl:{
+    type:String,
+    required:true,
    }
 
 

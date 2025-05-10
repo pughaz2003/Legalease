@@ -161,8 +161,8 @@ export default function UserDashboard() {
               <li key={i} className="p-4 bg-white border-2 border-gray-700   text-black  rounded-xl">
                 <p><strong>{lawyer.name}</strong></p>
                 <p>Specialization: {lawyer.specialization}</p>
-                <p>Phone-no: {lawyer.phone}</p>
-                <p>MailId: {lawyer.email}</p>
+                <p>Phone: {lawyer.phone}</p>
+                <p>Mail: {lawyer.email}</p>
                 {lawyer.distance && (
                   <p>Distance: {(lawyer.distance / 1000).toFixed(2)} km</p>
                 )}

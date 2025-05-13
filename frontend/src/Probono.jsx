@@ -59,7 +59,7 @@ const ProBonoRegistration = () => {
     <div className="max-w-xl mx-auto p-6 bg-white rounded-2xl shadow-lg mt-10">
       <h2 className="text-2xl font-bold mb-4 text-center text-blue-800">Pro Bono Lawyer Registration</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <input name="name" type="text" placeholder="Full Name" value={formData.name} onChange={handleChange} className="input" required />
+        <input name="name" type="text" placeholder="Full Name" value={formData.name} onChange={handleChange} className="input bg-gray-500 " required />
         <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} className="input" required />
         <input name="phone" type="text" placeholder="Phone" value={formData.phone} onChange={handleChange} className="input" required />
 

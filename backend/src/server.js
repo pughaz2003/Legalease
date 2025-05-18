@@ -15,7 +15,8 @@ connectDB();
 const {authRouter} = require("./routes/auth.js");
 const router =require("./routes/lawyerRoute.js");
 const userRouter = require('./routes/userLocation.js');
-const profileRouter =require('./routes/profile.js')
+const profileRouter =require('./routes/profile.js');
+const proBonoRoutes = require("./routes/proBono.js");
 
 
 
@@ -34,7 +35,9 @@ app.use(cors({origin: 'http://localhost:5173',
 app.use("/",authRouter);
 app.use("/api/lawyer",router);
 app.use('/api/user', userRouter);
-app.use('/api/profile',profileRouter)
+app.use('/api/profile',profileRouter);
+app.use('/api/probono',proBonoRoutes)
+
 
 
 

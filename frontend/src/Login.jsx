@@ -45,9 +45,9 @@ export default function Login() {
 
   return (
     <div className=''>
-      <div className="card bg-base-300 w-96 shadow-sm mx-auto mt-36">
+      <div className="card bg-gray-600 w-96 shadow-sm mx-auto mt-36">
         <div className="card-body items-center text-center">
-          <h2 className="card-title">Login</h2>
+          <h2 className="card-title text-white">Login</h2>
           <div className='space-y-4 mt-5'>
             <fieldset className="fieldset">
               <input 
@@ -74,7 +74,7 @@ export default function Login() {
             </div>
           )}
           <div className="card-actions mt-6">
-            <button className="btn bg-blue-700 w-24" onClick={handleLogin}>
+            <button className="btn bg-blue-700 w-24 text-white" onClick={handleLogin}>
               Login
             </button>
           </div>

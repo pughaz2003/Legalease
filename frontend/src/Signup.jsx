@@ -66,9 +66,9 @@ export default function Signup() {
 
   return (
     <div>
-      <div className="card bg-base-300 w-96 shadow-sm mx-auto mt-14">
+      <div className="card bg-gray-600 w-96 shadow-md mx-auto mt-14">
         <div className="card-body items-center text-center">
-          <h2 className="card-title">Sign-up</h2>
+          <h2 className="card-title text-white">Sign-up</h2>
           <div className='space-y-1'>
 
             <fieldset className="fieldset">
@@ -125,13 +125,13 @@ export default function Signup() {
           </div>
 
           <div>
-            <p className='font-bold'>
-              Already signed up? Go to <Link to="/login" className='text-blue-700'>Login</Link>
+            <p className='font-bold text-white'>
+              Already signed up? Go to <Link to="/login" className='text-cyan-300'>Login</Link>
             </p>
           </div>
 
           <div className="card-actions mt-6">
-            <button className="btn bg-blue-500 w-24" onClick={handleSignup}>Signup</button>
+            <button className="btn bg-blue-600 w-24 text-white" onClick={handleSignup}>Signup</button>
           </div>
         </div>
       </div>

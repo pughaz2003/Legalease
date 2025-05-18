@@ -22,7 +22,7 @@ const ProBonoRegistration = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:5000/register/probono", {
+      const res = await fetch("http://localhost:5000/api/probono", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

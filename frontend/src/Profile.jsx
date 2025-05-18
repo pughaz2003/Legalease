@@ -32,8 +32,8 @@ const Profile = () => {
 
       <div className="flex flex-col items-center mb-6">
         <img
-          className="rounded-full w-20 h-20 border-2 border-blue-500"
-          src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331257_1280.png"
+          className="rounded-full w-20 h-20 border-2 border-white bg-white"
+          src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png"
           alt="Profile"
         />
       </div>

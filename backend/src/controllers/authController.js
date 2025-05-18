@@ -37,13 +37,13 @@ const registerUser = async (req, res) => {
  //lawyer registration
  const registerLawyer = async (req, res) => {
    try {
-     const { name, email, password ,role,phone,licenseNumber,specialization,location } = req.body;
+     const { name, email, password ,role,phone,licenseNumber,specialization,location,proBono } = req.body;
 
   await validateRegLawyer(req);
 
   const hashPassword = await bcrypt.hash(password,10)
 
-  const lawyer = new Lawyer({name,email,password:hashPassword,role,phone,licenseNumber,specialization,location});
+  const lawyer = new Lawyer({name,email,password:hashPassword,role,phone,licenseNumber,specialization,location,proBono});
 
   await lawyer.save();
 

@@ -67,7 +67,7 @@ phone:
    },
    photoUrl:{
     type:String,
-    required:true,
+    
    }
 
 

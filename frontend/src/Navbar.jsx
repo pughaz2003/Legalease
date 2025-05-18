@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
-    <div><div className="navbar bg-base-300 shadow-sm">
+    <div><div className="navbar bg-gray-600 shadow-sm">
     <div className="flex-1">
-      <a className="btn btn-ghost text-xl">LegalEase</a>
+      <a className="btn btn-ghost text-xl text-white">LegalEase</a>
     </div>
     <div className="flex gap-2">
       

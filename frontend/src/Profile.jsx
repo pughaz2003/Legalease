@@ -2,7 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const Profile = () => {
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    role: ""
+  });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
@@ -13,7 +17,7 @@ const Profile = () => {
         setUserData(res.data.account);
         setLoading(false);
       })
-      .catch((err) => {
+      .catch(() => {
         setError("Failed to fetch profile data.");
         setLoading(false);
       });
@@ -23,39 +27,57 @@ const Profile = () => {
   if (error) return <div className="text-center mt-10 text-red-500">{error}</div>;
 
   return (
-    <div className="max-w-md mx-auto mt-10 bg-white shadow-lg rounded-xl  p-6">
-      <h1 className="text-2xl font-bold mb-4 text-center text-black">User Profile</h1>
-      <div className="flex flex-col items-center ">
-      <div className="">
-      <img className="rounded-full  w-28 h-28"
-              alt="Tailwind CSS Navbar component"
-              src="https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg?ga=GA1.1.32881981.1746974500&semt=ais_hybrid&w=740" />
+    <div className="max-w-xl mx-auto mt-10 bg-gray-700 shadow-2xl rounded-2xl p-6">
+      <h1 className="text-2xl font-bold mb-6 text-center text-white">Profile Details</h1>
+
+      <div className="flex flex-col items-center mb-6">
+        <img
+          className="rounded-full w-20 h-20 border-2 border-blue-500"
+          src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331257_1280.png"
+          alt="Profile"
+        />
       </div>
 
-      <div className="space-y-2 mt-3 font-semibold  text-base">
-        <div className="flex gap-1 ">
-          <span className="font-semibold text-blue-800 ">Name:</span>
-          <span className="text-gray-800">{userData.name}</span>
+      <form className="space-y-3">
+        <div>
+          <label className="block text-sm font-medium text-white">Name</label>
+          <input
+            type="text"
+            value={userData.name}
+            disabled
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 p-2"
+          />
         </div>
 
-        <div className="flex gap-1 ">
-          <span className="font-semibold text-blue-800">Email:</span>
-          <span className="text-gray-800">{userData.email}</span>
+        <div>
+          <label className="block text-sm font-medium text-white">Email</label>
+          <input
+            type="email"
+            value={userData.email}
+            disabled
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 p-2"
+          />
         </div>
 
-        <div className="flex gap-2">
-          <span className="font-semibold text-blue-800">Role:</span>
-          <span className="capitalize text-gray-800">{userData.role}</span>
+        <div>
+          <label className="block text-sm font-medium text-white">Role</label>
+          <input
+            type="text"
+            value={userData.role}
+            disabled
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 p-2 capitalize"
+          />
         </div>
-        <div className="mb-6 mt-6  text-center">
-        <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-          Edit Profile
-        </button>
-      </div>
-      </div>
 
-      
-      </div>
+        <div className="text-center mt-6">
+          <button
+            type="button"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
+          >
+            Edit Profile
+          </button>
+        </div>
+      </form>
     </div>
   );
 };

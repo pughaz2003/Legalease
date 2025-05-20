@@ -112,7 +112,7 @@ export default function UserDashboard() {
             onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
           />
           <button 
-            className="btn bg-blue-700" 
+            className="btn bg-blue-700 text-white" 
             onClick={handleSearch}
             disabled={isLoading || !searchText}
           >
@@ -121,7 +121,7 @@ export default function UserDashboard() {
         </div>
 
         <button 
-          className="btn w-full bg-blue-700" 
+          className="btn w-full bg-blue-700 text-white" 
           onClick={getLocation}
           disabled={isLoading}
         >
@@ -147,7 +147,7 @@ export default function UserDashboard() {
       </MapContainer>
 
       <button 
-        className="btn bg-blue-700 w-full mt-4" 
+        className="btn bg-blue-700 w-full mt-4 text-white" 
         onClick={findLawyers}
         disabled={isLoading || !position}
       >

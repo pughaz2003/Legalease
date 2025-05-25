@@ -6,7 +6,8 @@ import Dashboard from './Dashboard'
 import ProBonoRegistration from './Probono'
 import LocationPicker from './LocationPicker'
 import Profile from './Profile'
-import Chat from './Chat'
+
+
  
 
 
@@ -23,7 +24,10 @@ function App() {
         <Route path="/pro" element={<ProBonoRegistration />} />
         <Route path="/loc" element={<LocationPicker />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/chat" element={<Chat />} />
+       
+
+        
+        
         
       
       

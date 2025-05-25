@@ -25,11 +25,16 @@ export default function Login() {
       if (!response.ok) {
         throw new Error(data.message || 'Login failed');
       }
-
+      
       console.log("login successful");
       const token = data.token; 
+      const userId = data.account?._id;
       localStorage.setItem('token', token);
+      localStorage.setItem('userId', userId); 
       navigate('/dash');
+          console.log('[Login] Stored userId:', localStorage.getItem('userId'));
+    console.log('[Login] Stored token:', localStorage.getItem('token'));
+
       
     } catch (error) {
       setError(error.message || 'An unexpected error occurred.');

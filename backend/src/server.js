@@ -3,7 +3,6 @@ const express = require("express");
 const mongoose = require("mongoose");
 const  cookieParser = require("cookie-parser");
 const cors = require("cors");
-const chat = require("./models/chat.js");
 
 
 const app = express();
@@ -28,6 +27,7 @@ const proBonoRoutes = require("./routes/proBono.js");
 
 
 
+
 app.get("/", (req, res) => {
     res.send("API is running...");
 });
@@ -41,6 +41,7 @@ app.use("/api/lawyer",router);
 app.use('/api/user', userRouter);
 app.use('/api/profile',profileRouter);
 app.use('/api/probono',proBonoRoutes);
+
 
 
 

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MapContainer, TileLayer, Marker, useMapEvents } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import { useNavigate } from 'react-router-dom';
 
 
 delete L.Icon.Default.prototype._getIconUrl;
@@ -20,12 +21,14 @@ function LocationMarker({ position, setPosition }) {
   return position ? <Marker position={position} /> : null;
 }
 
+
 export default function UserDashboard() {
   const [position, setPosition] = useState(null);
   const [status, setStatus] = useState('');
   const [searchText, setSearchText] = useState('');
   const [lawyers, setLawyers] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
 
   const getLocation = () => {
     if (!navigator.geolocation) return setStatus("Geolocation not supported");
@@ -97,6 +100,7 @@ export default function UserDashboard() {
     }
   };
 
+
   return (
     <div className="p-6 max-w-4xl mx-auto space-y-6">
       <h2 className="text-2xl font-bold mb-2">User Dashboard</h2>
@@ -166,6 +170,9 @@ export default function UserDashboard() {
                 {lawyer.distance && (
                   <p>Distance: {(lawyer.distance / 1000).toFixed(2)} km</p>
                 )}
+            
+   
+
               </li>
             ))}
           </ul>

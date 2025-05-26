@@ -18,6 +18,7 @@ const router =require("./routes/lawyerRoute.js");
 const userRouter = require('./routes/userLocation.js');
 const profileRouter =require('./routes/profile.js');
 const proBonoRoutes = require("./routes/proBono.js");
+const messageRoutes = require("./routes/message.js");
 
 
 
@@ -41,6 +42,7 @@ app.use("/api/lawyer",router);
 app.use('/api/user', userRouter);
 app.use('/api/profile',profileRouter);
 app.use('/api/probono',proBonoRoutes);
+app.use('/api/messages',messageRoutes)
 
 
 

@@ -30,6 +30,10 @@ export default function Navbar() {
           </li>
           <li><Link to="/dash">Dashboard</Link></li>
           <li><Link to="/pro">Probono-Register</Link></li>
+          <li>
+   <Link to="/messages">Messages</Link>
+</li>
+
           
           
        

@@ -27,13 +27,16 @@ export default function Login() {
       }
       
       console.log("login successful");
-      const token = data.token; 
-      const userId = data.account?._id;
-      localStorage.setItem('token', token);
-      localStorage.setItem('userId', userId); 
+   const token = data.token;
+    const user = data.account; 
+
+    localStorage.setItem('token', token);
+    localStorage.setItem('user', JSON.stringify(user)); 
+    localStorage.setItem('userId', user._id);
+
       navigate('/dash');
-          console.log('[Login] Stored userId:', localStorage.getItem('userId'));
-    console.log('[Login] Stored token:', localStorage.getItem('token'));
+  console.log('[Login] User saved:', localStorage.getItem('user'));
+     
 
       
     } catch (error) {

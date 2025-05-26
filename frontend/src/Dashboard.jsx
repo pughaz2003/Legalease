@@ -99,6 +99,10 @@ export default function UserDashboard() {
       setIsLoading(false);
     }
   };
+  const handleStartChat = (lawyerId) => {
+  navigate(`/chat/${lawyerId}`); 
+};
+
 
 
   return (
@@ -171,7 +175,12 @@ export default function UserDashboard() {
                   <p>Distance: {(lawyer.distance / 1000).toFixed(2)} km</p>
                 )}
             
-   
+    <button 
+      onClick={() => handleStartChat(lawyer._id)}
+      className="mt-2 bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700"
+    >
+      Message
+    </button>
 
               </li>
             ))}

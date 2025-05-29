@@ -6,6 +6,22 @@ export default function Navbar() {
   const location = useLocation();
   const isAuthPage = location.pathname === '/login' || location.pathname === '/';
 
+  const handleLogout = async () => {
+  try {
+    await fetch("http://localhost:5000/logout", {
+      method: "POST",
+      credentials: "include",
+    });
+
+    localStorage.removeItem("user");
+    localStorage.removeItem("token");
+    window.location.href = "/login"; 
+  } catch (err) {
+    console.error("Logout failed", err);
+  }
+};
+
+
   return (
     <div className="navbar bg-gray-600 shadow-sm">
       <div className="flex-1">
@@ -31,6 +47,9 @@ export default function Navbar() {
               <li><Link to="/dash">Dashboard</Link></li>
               <li><Link to="/pro">Probono-Register</Link></li>
               <li><Link to="/messages">Messages</Link></li>
+             <li> <Link to="/my-cases">View My Cases</Link></li>
+            <li><button onClick={handleLogout} className="text-red-500">Logout</button></li>
+
             </ul>
           </div>
         )}

@@ -65,7 +65,7 @@ export default function Signup() {
   };
 
   return (
-    <div>
+    <div className='mb-12'>
       <div className="card bg-gray-600 w-96 shadow-md mx-auto mt-14">
         <div className="card-body items-center text-center">
           <h2 className="card-title text-white">Sign-up</h2>

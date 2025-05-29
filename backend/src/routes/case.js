@@ -38,4 +38,15 @@ router.get("/lawyer/:lawyerId", async (req, res) => {
   }
 });
 
+router.get("/lawyer/:lawyerId", async (req, res) => {
+  try {
+    const cases = await Case.find({ lawyerId: req.params.lawyerId }).populate("userId", "name email");
+    res.json({ success: true, cases });
+  } catch (err) {
+    console.error("Error fetching cases for lawyer:", err);
+    res.status(500).json({ success: false, message: "Server error" });
+  }
+});
+
+
 module.exports = router;

@@ -7,6 +7,7 @@ const ProBonoRegistration = () => {
     licenseNumber: "",
     specialization: "",
     address: "",
+    availability: "",
     proBono: true,
   });
 
@@ -37,6 +38,7 @@ const ProBonoRegistration = () => {
           licenseNumber: "",
           specialization: "",
           address: "",
+          availability: "",
           proBono: true,
         });
       } else {
@@ -95,6 +97,14 @@ const ProBonoRegistration = () => {
           type="text"
           placeholder="Address"
           value={formData.address}
+          onChange={handleChange}
+          className="input"
+        />
+          <input
+          name="availability"
+          type="text"
+          placeholder="Availability"
+          value={formData.availability}
           onChange={handleChange}
           className="input"
         />

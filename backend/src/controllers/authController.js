@@ -96,5 +96,14 @@ const login = async (req, res) => {
     res.status(500).json({ message: "Server error", error });
   }
 };
+const logout = (req, res) => {
+  res.clearCookie("token", {
+    httpOnly: true,
+    sameSite: 'strict',
+    secure: process.env.NODE_ENV === 'production',
+  });
+  res.json({ message: "Logout successful" });
+};
 
-module.exports = { registerUser, registerLawyer, login };
+
+module.exports = { registerUser, registerLawyer, login ,logout };

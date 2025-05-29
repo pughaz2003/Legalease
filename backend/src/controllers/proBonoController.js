@@ -2,9 +2,9 @@ const ProBonoLawyer = require("../models/proBonoLawyer.js");
 
 const registerProBono = async (req, res) => {
   try {
-    const { name, email, licenseNumber, specialization, address } = req.body;
+    const { name, email, licenseNumber, specialization, address,availability } = req.body;
 
-    if (!name || !email || !licenseNumber || !specialization) {
+    if (!name || !email || !licenseNumber || !specialization||!availability) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
@@ -19,6 +19,7 @@ const registerProBono = async (req, res) => {
       licenseNumber,
       specialization,
       address,
+      availability,
     });
 
     await newLawyer.save();

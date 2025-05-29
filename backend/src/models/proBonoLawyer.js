@@ -13,6 +13,7 @@ const proBonoLawyerSchema = new mongoose.Schema({
   specialization: { type: String,
      required: true },
   address: { type: String },
+   availability: { type: String },
   proBono: { type: Boolean,
      default: true },
 });

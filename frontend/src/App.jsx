@@ -8,6 +8,7 @@ import LocationPicker from './LocationPicker'
 import Profile from './Profile'
 import Chat from './Chat'
 import MessageList from './MessageList'
+import SubmitCase from './SubmitCase'
 
 
  
@@ -28,6 +29,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/chat/:lawyerId" element={<Chat />} />
          <Route path="/messages" element={<MessageList />} />
+         <Route path="/submit-case/:lawyerId" element={<SubmitCase />} />
 
        
 

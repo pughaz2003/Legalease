@@ -181,6 +181,13 @@ export default function UserDashboard() {
     >
       Message
     </button>
+     <div className='mt-1'>
+      <button
+      onClick={() => navigate(`/submit-case/${lawyer._id}`)}
+      className="btn bg-green-600  text-white"
+    >
+      Submit Case
+    </button></div>
 
               </li>
             ))}

@@ -23,7 +23,7 @@ export default function Navbar() {
 
 
   return (
-    <div className="navbar bg-gray-600 shadow-sm">
+    <div className="navbar bg-gray-600   shadow-sm">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl text-white">LegalEase</Link>
       </div>

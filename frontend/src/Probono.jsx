@@ -51,7 +51,7 @@ const ProBonoRegistration = () => {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6 bg-gray-700 rounded-2xl shadow-lg mt-10">
+    <div className="max-w-xl mx-auto p-6 bg-gray-400 rounded-2xl shadow-lg mt-10">
       <h2 className="text-2xl font-bold mb-4 text-center text-white">
         Pro Bono Registration
       </h2>

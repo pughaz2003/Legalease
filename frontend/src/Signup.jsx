@@ -65,10 +65,10 @@ export default function Signup() {
   };
 
   return (
-    <div className='mb-12'>
-      <div className="card bg-gray-600 w-96 shadow-md mx-auto mt-14">
+    <div className='mb-12 '>
+      <div className="card bg-gray-400 w-96 shadow-md mx-auto mt-14">
         <div className="card-body items-center text-center">
-          <h2 className="card-title text-white">Sign-up</h2>
+          <h2 className="card-title text-black">Sign-up</h2>
           <div className='space-y-1'>
 
             <fieldset className="fieldset">
@@ -126,7 +126,7 @@ export default function Signup() {
 
           <div>
             <p className='font-bold text-white'>
-              Already signed up? Go to <Link to="/login" className='text-cyan-300'>Login</Link>
+              Already signed up? Go to <Link to="/login" className='text-blue-700'>Login</Link>
             </p>
           </div>
 

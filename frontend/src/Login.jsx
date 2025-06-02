@@ -53,9 +53,9 @@ export default function Login() {
 
   return (
     <div className=''>
-      <div className="card bg-gray-600 w-96 shadow-sm mx-auto mt-36">
+      <div className="card bg-gray-400 w-96 shadow-sm mx-auto mt-36">
         <div className="card-body items-center text-center">
-          <h2 className="card-title text-white">Login</h2>
+          <h2 className="card-title text-black">Login</h2>
           <div className='space-y-4 mt-5'>
             <fieldset className="fieldset">
               <input 

@@ -27,7 +27,7 @@ const Profile = () => {
   if (error) return <div className="text-center mt-10 text-red-500">{error}</div>;
 
   return (
-    <div className="max-w-xl mx-auto mt-10 bg-gray-700 shadow-2xl rounded-2xl p-6">
+    <div className="max-w-xl mx-auto mt-10 bg-gray-400 shadow-2xl rounded-2xl p-6">
       <h1 className="text-2xl font-bold mb-6 text-center text-white">Profile Details</h1>
 
       <div className="flex flex-col items-center mb-6">
@@ -65,7 +65,7 @@ const Profile = () => {
             type="text"
             value={userData.role}
             disabled
-            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 p-2 capitalize"
+            className="mt-1 block w-full rounded-md border-gray-300 shadow-sm bg-gray-100 p-2  capitalize"
           />
         </div>
 
